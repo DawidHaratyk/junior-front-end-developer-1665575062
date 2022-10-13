@@ -1,16 +1,22 @@
-import completedTask from "../assets/completedTask";
-import activeTask from "../assets/activeTask";
-import unlockedTask from "../assets/unlockedTask";
+import completedTask from "../assets/completedTask.svg";
+import activeTask from "../assets/activeTask.svg";
+import unlockedTask from "../assets/unlockedTask.svg";
+
+export const statusIconsList = {
+  completed: completedTask,
+  active: activeTask,
+  unlocked: unlockedTask,
+};
 
 export const tasksData = [
   {
     title: "Application Setup",
-    status: completedTask,
+    status: "completed",
     businessContexts: [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Kirsten Aniston",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -20,7 +26,7 @@ export const tasksData = [
       {
         title: "New sprint, tasks and intro information.",
         author: "Olga Nelson",
-        date: "2022-09-20",
+        created_at: "2022-09-20",
         content: [
           "Hi Eric, congratulations on completing the previous assignment. This time you will have to focus on...",
         ],
@@ -28,7 +34,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Olga Nelson",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -39,12 +45,12 @@ export const tasksData = [
   },
   {
     title: "Static Books List",
-    status: completedTask,
+    status: "completed",
     businessContexts: [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Kirsten Aniston",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -54,7 +60,7 @@ export const tasksData = [
       {
         title: "New sprint, tasks and intro information.",
         author: "Olga Nelson",
-        date: "2022-09-20",
+        created_at: "2022-09-20",
         content: [
           "Hi Eric, congratulations on completing the previous assignment. This time you will have to focus on...",
         ],
@@ -62,7 +68,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Olga Nelson",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -73,12 +79,12 @@ export const tasksData = [
   },
   {
     title: "Administration Panel",
-    status: completedTask,
+    status: "completed",
     businessContexts: [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Kirsten Aniston",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -88,7 +94,7 @@ export const tasksData = [
       {
         title: "New sprint, tasks and intro information.",
         author: "Olga Nelson",
-        date: "2022-09-20",
+        created_at: "2022-09-20",
         content: [
           "Hi Eric, congratulations on completing the previous assignment. This time you will have to focus on...",
         ],
@@ -96,7 +102,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Olga Nelson",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -107,12 +113,12 @@ export const tasksData = [
   },
   {
     title: "Connect Admin with Frontend",
-    status: activeTask,
+    status: "active",
     businessContexts: [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Kirsten Aniston",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -122,7 +128,7 @@ export const tasksData = [
       {
         title: "New sprint, tasks and intro information.",
         author: "Olga Nelson",
-        date: "2022-09-20",
+        created_at: "2022-09-20",
         content: [
           "Hi Eric, congratulations on completing the previous assignment. This time you will have to focus on...",
         ],
@@ -130,7 +136,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Olga Nelson",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -141,12 +147,12 @@ export const tasksData = [
   },
   {
     title: "Book Review Feature",
-    status: unlockedTask,
+    status: "unlocked",
     businessContexts: [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Kirsten Aniston",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -156,7 +162,7 @@ export const tasksData = [
       {
         title: "New sprint, tasks and intro information.",
         author: "Olga Nelson",
-        date: "2022-09-20",
+        created_at: "2022-09-20",
         content: [
           "Hi Eric, congratulations on completing the previous assignment. This time you will have to focus on...",
         ],
@@ -164,7 +170,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Olga Nelson",
-        date: "2022-08-15",
+        created_at: "2022-08-15",
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",

@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &__user-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    &__user-image {
+        width: 42px;
+        height: 42px;
+    }
+}
