@@ -15,7 +15,8 @@ function MessageBox({ author, created_at, title, content, status }) {
             <span className="message__text">
               {author}
               <span className="message__text-dot">•</span>
-              {created_at}
+              {created_at.toLocaleString("en-GB", { month: "short" }) + " "}
+              {created_at.getDate()}
             </span>
           </div>
           <h5 className="message__title message__active">{title}</h5>
@@ -29,7 +30,8 @@ function MessageBox({ author, created_at, title, content, status }) {
             <span className="message__text">
               {author}
               <span className="message__text-dot">•</span>
-              {created_at}
+              {created_at.toLocaleString("en-GB", { month: "short" }) + " "}
+              {created_at.getDate()}
             </span>
           </div>
           <h5 className="message__title">{title}</h5>
@@ -43,7 +45,8 @@ function MessageBox({ author, created_at, title, content, status }) {
             <span className="message__text">
               {author}
               <span className="message__text-dot">•</span>
-              {created_at}
+              {created_at.toLocaleString("en-GB", { month: "short" }) + " "}
+              {created_at.getDate()}
             </span>
           </div>
           <h5 className="message__title">{title}</h5>

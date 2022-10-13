@@ -127,7 +127,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Kirsten Aniston",
-        created_at: "2022-08-15",
+        created_at: new Date("2022", "08", "15", "11", "20"),
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
@@ -138,7 +138,7 @@ export const tasksData = [
       {
         title: "New sprint, tasks and intro information.",
         author: "Olga Nelson",
-        created_at: "2022-09-20",
+        created_at: new Date("2022", "08", "15", "11", "20"),
         content: [
           "Hi Eric, congratulations on completing the previous assignment. This time you will have to focus on...",
         ],
@@ -147,7 +147,7 @@ export const tasksData = [
       {
         title: "Application has been accepted  🎉  🙌",
         author: "Olga Nelson",
-        created_at: "2022-08-15",
+        created_at: new Date("2022", "08", "15", "11", "20"),
         content: [
           "Hello! My name is Kirsten, and I'm super happy to announce that your application to join Coders Family has been accepted! 🎉 🙌",
           "You really impressed us during the interview process, and we'd like to offer you a project with {COMPANY}. We've been working with {COMPANY} for quite some time, and it's important for us to keep them satisfied with our services — hence why we believe you'll be a great fit for this job.",
