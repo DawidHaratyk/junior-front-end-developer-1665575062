@@ -1,0 +1,42 @@
+.message-content {
+    padding: 17px 26px 17px 35px;
+
+    &__headline {
+        margin-bottom: 11px;
+        font-weight: 600;
+        font-size: 21px;
+    }
+
+    .content {
+        display: flex;
+
+        &__image-container {
+            margin-right: 14px;
+        }
+
+        &__info {
+            margin-top: 10px;
+        }
+
+        &__text {
+            font-size: 10px;
+            font-weight: 500;
+
+            &-dot {
+                margin: 0 11px;
+                color: #6b778c;
+            }
+        }
+
+        &__text,
+        &__description {
+            color: #6b778c;
+        }
+
+        &__description {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 24px;
+        }
+    }
+}

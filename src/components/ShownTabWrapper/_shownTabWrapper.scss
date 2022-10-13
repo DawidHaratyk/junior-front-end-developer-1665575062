@@ -1,0 +1,32 @@
+.tabs {
+    display: flex;
+    padding: 0 48px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &__button {
+        display: flex;
+        align-items: center;
+        padding: 22px 0;
+        margin-right: 20px;
+        background-color: white;
+        border: none;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #0165ff;
+        cursor: pointer;
+
+        &-image {
+            margin-right: 16px;
+        }
+    }
+
+    &__active {
+        border-bottom: 2px solid #0165ff;
+    }
+}
+
+.tab-content {
+    display: flex;
+    height: 100%;
+}

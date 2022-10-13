@@ -1,0 +1,15 @@
+.user-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid #d4d6da;
+    border-radius: 50%;
+
+    .image {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+    }
+}
