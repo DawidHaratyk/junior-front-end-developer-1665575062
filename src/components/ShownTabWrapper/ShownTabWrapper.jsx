@@ -13,7 +13,7 @@ const shownTabWrapperStyles = {
   width: "100%",
 };
 
-function ShownTabWrapper({ currentTaskIndex, setCurrentTaskIndex }) {
+function ShownTabWrapper() {
   const [currentTab, setCurrentTab] = useState("Business Context");
 
   return (
@@ -22,11 +22,8 @@ function ShownTabWrapper({ currentTaskIndex, setCurrentTaskIndex }) {
         <Tab title={currentTab} icon={tabIcon} currentTab={currentTab} />
       </div>
       <section className="tab-content">
-        <MessagesListView
-          currentTaskIndex={currentTaskIndex}
-          setCurrentTaskIndex={setCurrentTaskIndex}
-        />
-        <MessageContentView currentTaskIndex={currentTaskIndex} />
+        <MessagesListView />
+        <MessageContentView />
       </section>
     </CardWrapper>
   );

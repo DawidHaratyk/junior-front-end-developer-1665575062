@@ -7,12 +7,12 @@ const cardWrapperStyles = {
   height: "87vh",
 };
 
-function TasksListView({ setCurrentTaskIndex }) {
+function TasksListView() {
   return (
     <CardWrapper styles={cardWrapperStyles}>
       <h4 className="tasks-list-headline">Your Tasks</h4>
       <div className="tasks-list">
-        <TasksList setCurrentTaskIndex={setCurrentTaskIndex} />
+        <TasksList />
       </div>
     </CardWrapper>
   );
