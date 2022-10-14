@@ -2,15 +2,18 @@ import React from "react";
 import { tasksData } from "../../data/data";
 import image from "../../assets/user2.png";
 import UserImage from "../UserImage/UserImage";
+import { useTasks } from "../../contexts/TasksContext";
 
-function MessageContentView({ currentTaskIndex }) {
+function MessageContentView() {
+  const { currentTaskIndex } = useTasks();
+
   const activeBusinessContextIndex = tasksData[
     currentTaskIndex
   ].businessContexts.findIndex((task) => task.status === "current");
 
   const { title, author, created_at, content, status } =
     tasksData[currentTaskIndex].businessContexts[
-      activeBusinessContextIndex !== -1 ? activeBusinessContextIndex : 0
+      activeBusinessContextIndex !== -1 ? activeBusinessContextIndex : 1
     ];
 
   return (

@@ -1,15 +1,30 @@
 import React from "react";
-import CardWrapper from "../CardWrapper/CardWrapper";
+import { useTasks } from "../../contexts/TasksContext";
 
-const messageBoxStyles = {
-  marginBottom: "8px",
-};
+function MessageBox({
+  businessContextIndex,
+  author,
+  created_at,
+  title,
+  content,
+  status,
+}) {
+  const { tasks, setTasks, currentTaskIndex } = useTasks();
 
-function MessageBox({ author, created_at, title, content, status }) {
+  const handleSwitchMessage = (businessContextIndex) => {
+    console.log(businessContextIndex);
+    tasks[currentTaskIndex].businessContexts[businessContextIndex].status =
+      "current";
+    setTasks((oldTasks) => [...oldTasks]);
+  };
+
   switch (status) {
     case "new":
       return (
-        <div className="message message__shadow-light">
+        <div
+          className="message message__shadow-light"
+          onClick={() => handleSwitchMessage(businessContextIndex)}
+        >
           <div className="message__author-container">
             <span className="message__text message__status">new</span>
             <span className="message__text">
@@ -25,7 +40,10 @@ function MessageBox({ author, created_at, title, content, status }) {
       );
     case "current":
       return (
-        <div className="message message__shadow">
+        <div
+          className="message message__shadow"
+          onClick={() => handleSwitchMessage(businessContextIndex)}
+        >
           <div className="message__author-container">
             <span className="message__text">
               {author}
@@ -40,7 +58,10 @@ function MessageBox({ author, created_at, title, content, status }) {
       );
     case "old":
       return (
-        <div className="message message__no-background">
+        <div
+          className="message message__no-background"
+          onClick={() => handleSwitchMessage(businessContextIndex)}
+        >
           <div className="message__author-container">
             <span className="message__text">
               {author}

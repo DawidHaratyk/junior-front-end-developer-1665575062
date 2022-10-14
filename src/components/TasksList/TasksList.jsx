@@ -2,9 +2,9 @@ import React from "react";
 import { tasksData } from "../../data/data";
 import Task from "../Task/Task";
 
-function TasksList({ setCurrentTaskIndex }) {
+function TasksList() {
   const tasksList = tasksData.map((task, key) => (
-    <Task setCurrentTaskIndex={setCurrentTaskIndex} index={key} {...task} />
+    <Task index={key} {...task} />
   ));
 
   return <>{tasksList}</>;

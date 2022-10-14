@@ -1,10 +1,13 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
+import { useTasks } from "../../contexts/TasksContext";
 import { statusIconsList } from "../../data/data";
 
 const linkStyles = { textDecoration: "none" };
 
-function Task({ setCurrentTaskIndex, index, title, status }) {
+function Task({ index, title, status }) {
+  const { setCurrentTaskIndex } = useTasks();
+
   const linkPath = status !== "unlocked" && `/${title.replaceAll(" ", "")}`;
 
   const handleSwitchTask = useCallback(() => {
