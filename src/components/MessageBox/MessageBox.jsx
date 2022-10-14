@@ -1,5 +1,5 @@
-import React from "react";
-import { useTasks } from "../../contexts/TasksContext";
+import React from 'react'
+import { useTasks } from '../../contexts/TasksContext'
 
 function MessageBox({
   businessContextIndex,
@@ -9,17 +9,22 @@ function MessageBox({
   content,
   status,
 }) {
-  const { tasks, setTasks, currentTaskIndex } = useTasks();
+  const { tasks, setTasks, currentTaskIndex } = useTasks()
 
   const handleSwitchMessage = (businessContextIndex) => {
-    console.log(businessContextIndex);
+    tasks[currentTaskIndex].businessContexts.forEach((businessContext) => {
+      if (businessContext.status === 'current') {
+        businessContext.status = 'old'
+      }
+    })
+
     tasks[currentTaskIndex].businessContexts[businessContextIndex].status =
-      "current";
-    setTasks((oldTasks) => [...oldTasks]);
-  };
+      'current'
+    setTasks((oldTasks) => [...oldTasks])
+  }
 
   switch (status) {
-    case "new":
+    case 'new':
       return (
         <div
           className="message message__shadow-light"
@@ -30,15 +35,15 @@ function MessageBox({
             <span className="message__text">
               {author}
               <span className="message__text-dot">•</span>
-              {created_at.toLocaleString("en-GB", { month: "short" }) + " "}
+              {created_at.toLocaleString('en-GB', { month: 'short' }) + ' '}
               {created_at.getDate()}
             </span>
           </div>
           <h5 className="message__title message__active">{title}</h5>
           <p className="message__description">{content[0]}</p>
         </div>
-      );
-    case "current":
+      )
+    case 'current':
       return (
         <div
           className="message message__shadow"
@@ -48,15 +53,15 @@ function MessageBox({
             <span className="message__text">
               {author}
               <span className="message__text-dot">•</span>
-              {created_at.toLocaleString("en-GB", { month: "short" }) + " "}
+              {created_at.toLocaleString('en-GB', { month: 'short' }) + ' '}
               {created_at.getDate()}
             </span>
           </div>
           <h5 className="message__title">{title}</h5>
           <p className="message__description">{content[0]}</p>
         </div>
-      );
-    case "old":
+      )
+    case 'old':
       return (
         <div
           className="message message__no-background"
@@ -66,17 +71,17 @@ function MessageBox({
             <span className="message__text">
               {author}
               <span className="message__text-dot">•</span>
-              {created_at.toLocaleString("en-GB", { month: "short" }) + " "}
+              {created_at.toLocaleString('en-GB', { month: 'short' }) + ' '}
               {created_at.getDate()}
             </span>
           </div>
           <h5 className="message__title">{title}</h5>
           <p className="message__description">{content[0]}</p>
         </div>
-      );
+      )
     default:
-      console.log("The status is incorrect");
+      console.log('The status is incorrect')
   }
 }
 
-export default MessageBox;
+export default MessageBox
