@@ -14,7 +14,9 @@ const shownTabWrapperStyles = {
 };
 
 function ShownTabWrapper() {
-  const [currentTab, setCurrentTab] = useState("Business Context");
+  // const [currentTab, setCurrentTab] = useState("Business Context");
+  // In the future we can setCurrentTab in order to switch between tabs
+  const [currentTab] = useState("Business Context");
 
   return (
     <CardWrapper styles={shownTabWrapperStyles}>
