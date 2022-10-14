@@ -76,28 +76,6 @@
   background-color: #f4f5f7;
 }
 
-.task {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 17px;
-}
-.task__status-image {
-  margin-right: 8px;
-}
-.task__text {
-  font-weight: 500;
-  font-size: 12px;
-}
-
-.active {
-  font-weight: 600;
-}
-
-.unlocked {
-  color: #aeb5c1;
-}
-
 .card-wrapper {
   background-color: white;
   border-radius: 12px;
@@ -278,4 +256,25 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 17px;
+}
+.task__status-image {
+  margin-right: 8px;
+}
+.task__text {
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+}
+.task .active {
+  font-weight: 600;
+}
+.task .unlocked {
+  color: #aeb5c1;
 }/*# sourceMappingURL=style.css.map */

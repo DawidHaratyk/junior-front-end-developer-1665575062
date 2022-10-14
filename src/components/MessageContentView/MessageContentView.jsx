@@ -4,37 +4,34 @@ import image from "../../assets/user2.png";
 import UserImage from "../UserImage/UserImage";
 
 function MessageContentView({ currentTaskIndex }) {
-  console.log(tasksData[currentTaskIndex].businessContexts);
-  // const {} = tasksData[currentTaskIndex].businessContexts
+  const activeBusinessContextIndex = tasksData[
+    currentTaskIndex
+  ].businessContexts.findIndex((task) => task.status === "current");
+
+  const { title, author, created_at, content, status } =
+    tasksData[currentTaskIndex].businessContexts[
+      activeBusinessContextIndex !== -1 ? activeBusinessContextIndex : 0
+    ];
 
   return (
     <div className="message-content">
-      <h2 className="message-content__headline">
-        Application has been accepted 🎉 🙌
-      </h2>
+      <h2 className="message-content__headline">{title}</h2>
       <div className="content">
         <div className="content__image-container">
           <UserImage image={image} />
         </div>
         <div>
           <div className="content__info">
-            <span className="content__headline">Kirsten Aniston</span>
+            <span className="content__headline">{author}</span>
             <span className="content__text">
               <span className="content__text-dot">•</span>
-              Today, 17th December
+              {created_at.getDate()}
+              {/* improve date */}
               <span className="content__text-dot">•</span>
               11:20
             </span>
           </div>
-          <p className="content__description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-            soluta suscipit laboriosam rem doloribus officiis aliquid
-            laudantium? Voluptatem, illo a dignissimos quam similique obcaecati
-            totam distinctio nulla et voluptatibus in?Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Odio non ex dolores in quae
-            distinctio cumque veniam quibusdam soluta consectetur, voluptatum
-            ipsa sapiente temporibus, eum quis ipsum ad corrupti recusandae!
-          </p>
+          <p className="content__description">{content[0]}</p>
         </div>
       </div>
     </div>
