@@ -3,6 +3,7 @@ import { tasksData } from '../../data/data'
 import image from '../../assets/user2.png'
 import UserImage from '../UserImage/UserImage'
 import { useTasks } from '../../contexts/TasksContext'
+import TextWithDotList from '../TextWithDotList/TextWithDotList'
 
 function MessageContentView() {
   const { currentTaskIndex } = useTasks()
@@ -19,7 +20,14 @@ function MessageContentView() {
   const { title, author, created_at, content } =
     currentBusinessContexts[currentBusinessContextIndex]
 
-  console.log(created_at.toDateString(), new Date().toDateString())
+  const texts = [
+    `${
+      created_at.toDateString() === new Date().toDateString() ? 'Today, ' : ''
+    } ${created_at.getDate()}th ${created_at.toLocaleString('en-GB', {
+      month: 'long',
+    })}`,
+    `${created_at.getHours()}:${created_at.getMinutes()}`,
+  ]
 
   return (
     <div className="message-content">
@@ -33,18 +41,7 @@ function MessageContentView() {
             <span className="content__headline">{author}</span>
             <span className="content__text">
               <span className="content__text-dot">•</span>
-              <span className="content__text">
-                {created_at.toDateString() === new Date().toDateString() &&
-                  'Today, '}
-              </span>
-              <span className="content__text">
-                {created_at.getDate()}th{' '}
-                {created_at.toLocaleString('en-GB', { month: 'long' })}
-              </span>
-              <span className="content__text-dot">•</span>
-              <span className="content__text">
-                {created_at.getHours()}:{created_at.getMinutes()}
-              </span>
+              <TextWithDotList texts={texts} />
             </span>
           </div>
           <p className="content__description">{content[0]}</p>
