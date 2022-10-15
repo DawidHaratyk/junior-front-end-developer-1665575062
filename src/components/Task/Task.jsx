@@ -1,20 +1,20 @@
-import React, { useCallback } from "react";
-import { Link } from "react-router-dom";
-import { useTasks } from "../../contexts/TasksContext";
-import { statusIconsList } from "../../data/data";
+import React, { useCallback } from 'react'
+import { Link } from 'react-router-dom'
+import { useTasks } from '../../contexts/TasksContext'
+import { statusIconsList } from '../../data/data'
 
-const linkStyles = { textDecoration: "none" };
+const linkStyles = { textDecoration: 'none' }
 
 function Task({ index, title, status }) {
-  const { setCurrentTaskIndex } = useTasks();
+  const { setCurrentTaskIndex } = useTasks()
 
-  const linkPath = status !== "unlocked" && `/${title.replaceAll(" ", "")}`;
+  const linkPath = status !== 'unlocked' && `/${title.replaceAll(' ', '')}`
 
   const handleSwitchTask = useCallback(() => {
-    if (status !== "unlocked") {
-      setCurrentTaskIndex(index);
+    if (status !== 'unlocked') {
+      setCurrentTaskIndex(index)
     }
-  }, [index, setCurrentTaskIndex, status]);
+  }, [index, setCurrentTaskIndex, status])
 
   return (
     <div className="task">
@@ -27,7 +27,7 @@ function Task({ index, title, status }) {
         <h5 className={`task__text ${status}`}>{title}</h5>
       </Link>
     </div>
-  );
+  )
 }
 
-export default Task;
+export default Task

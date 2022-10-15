@@ -1,13 +1,13 @@
-import React from "react";
-import { tasksData } from "../../data/data";
-import Task from "../Task/Task";
+import React from 'react'
+import { useTasks } from '../../contexts/TasksContext'
+import Task from '../Task/Task'
 
 function TasksList() {
-  const tasksList = tasksData.map((task, key) => (
-    <Task index={key} {...task} />
-  ));
+  const { tasks } = useTasks()
 
-  return <>{tasksList}</>;
+  const tasksList = tasks.map((task, key) => <Task index={key} {...task} />)
+
+  return <>{tasksList}</>
 }
 
-export default TasksList;
+export default TasksList

@@ -7,14 +7,17 @@ import { useTasks } from '../../contexts/TasksContext'
 function MessageContentView() {
   const { currentTaskIndex } = useTasks()
 
-  const activeBusinessContextIndex = tasksData[
-    currentTaskIndex
-  ].businessContexts.findIndex((task) => task.status === 'current')
+  const currentBusinessContexts = tasksData[currentTaskIndex].businessContexts
 
-  const { title, author, created_at, content, status } =
-    tasksData[currentTaskIndex].businessContexts[
-      activeBusinessContextIndex !== -1 ? activeBusinessContextIndex : 1
-    ]
+  const activeBusinessContextIndex = currentBusinessContexts.findIndex(
+    (task) => task.status === 'current'
+  )
+
+  const currentBusinessContextIndex =
+    activeBusinessContextIndex !== -1 ? activeBusinessContextIndex : 1
+
+  const { title, author, created_at, content } =
+    currentBusinessContexts[currentBusinessContextIndex]
 
   console.log(created_at.toDateString(), new Date().toDateString())
 
